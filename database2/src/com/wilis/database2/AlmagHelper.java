@@ -27,13 +27,10 @@ class AlmagHelper extends SQLiteOpenHelper {
 	}
 
 	public Cursor getAll() {
-		return(getReadableDatabase()
-						.rawQuery("SELECT _id, nama, alamat, jekel, hp FROM almag ORDER BY nama",
-											null));
+		return(getReadableDatabase().rawQuery("SELECT _id, nama, alamat, jekel, hp FROM almag ORDER BY nama", null));
 	}
 	
-	public void insert(String nama, String alamat,
-										 String jekel, String hp) {
+	public void insert(String nama, String alamat, String jekel, String hp) {
 		ContentValues cv=new ContentValues();
 					
 		cv.put("nama", nama);
