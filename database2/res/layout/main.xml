@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TabHost xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@android:id/tabhost"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent">
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent">
+		<TabWidget android:id="@android:id/tabs"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+		/>
+		<FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			>
+			<LinearLayout
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent"
+				>
+				<ListView android:id="@+id/almag"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+				/>
+			</LinearLayout>
+			<TableLayout android:id="@+id/details"
+				android:layout_width="fill_parent"
+				android:layout_height="wrap_content"
+				android:stretchColumns="1"
+				android:paddingTop="4px"
+				>
+				<TableRow>
+					<TextView android:text="Nama:" />
+					<EditText android:id="@+id/nama" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Alamat:" />
+					<EditText android:id="@+id/alamat" />
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Jekel:" />
+					<RadioGroup android:id="@+id/jekel">
+						<RadioButton android:id="@+id/pria"
+							android:text="Pria"
+						/>
+						<RadioButton android:id="@+id/perempuan"
+							android:text="Perempuan"
+						/>
+					</RadioGroup>
+				</TableRow>
+				<TableRow>
+					<TextView android:text="Hp:" />
+					<EditText android:id="@+id/hp"
+						android:gravity="top"
+						android:scrollHorizontally="false"
+						
+					/>
+				</TableRow>
+				<Button android:id="@+id/save"
+					android:layout_width="fill_parent"
+					android:layout_height="wrap_content"
+					android:text="Save"
+				/>
+			</TableLayout>
+		</FrameLayout>
+	</LinearLayout>
+</TabHost>
