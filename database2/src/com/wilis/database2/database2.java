@@ -92,9 +92,7 @@ public class database2 extends TabActivity {
 	};
 	
 	private AdapterView.OnItemClickListener onListClick=new AdapterView.OnItemClickListener() {
-		public void onItemClick(AdapterView<?> parent,
-															View view, int position,
-															long id) {
+		public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 			model.moveToPosition(position);
 			nama.setText(helper.getNama(model));
 			alamat.setText(helper.getAlamat(model));
@@ -118,16 +116,14 @@ public class database2 extends TabActivity {
 		}
 		
 		@Override
-		public void bindView(View row, Context ctxt,
-												 Cursor c) {
+		public void bindView(View row, Context ctxt, Cursor c) {
 			AlmagHolder holder=(AlmagHolder)row.getTag();
 			
 			holder.populateFrom(c, helper);
 		}
 		
 		@Override
-		public View newView(Context ctxt, Cursor c,
-												 ViewGroup parent) {
+		public View newView(Context ctxt, Cursor c, ViewGroup parent) {
 			LayoutInflater inflater=getLayoutInflater();
 			View row=inflater.inflate(R.layout.row, parent, false);
 			AlmagHolder holder=new AlmagHolder(row);
